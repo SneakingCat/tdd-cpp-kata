@@ -7,47 +7,24 @@ for TDD. The example used in the skeleton is the "FizzBuzz" game.
 Setting up the environment
 --------------------------
 
-First, create a directory and change to it:
+In order to fetch Google Test and the skeleton repository proxies for
+http and https may have to be set. On site at Ericsson this can be
+made by:
 
-> mkdir tdd-kata
-> cd tdd-kata
+*export http_proxy=http://www-proxy.lmera.ericsson.se:8080; export https_proxy=https://www-proxy.lmera.ericsson.se:8080*
 
-Secondly, fetch the Google Test framework.
+Create a base directory for the kata and go fetch Google Test:
 
-tdd-kata > wget http://googletest.googlecode.com/files/gtest-1.7.0.zip
+*mkdir tdd-kata ; cd tdd-kata ; wget http://googletest.googlecode.com/files/gtest-1.7.0.zip ; unzip gtest-1.7.0.zip*
 
-Unpack the zip-archive.
+Build you local copy of Google Test:
 
-tdd-kata > file-roller --extract-here gtest-1.7.0.zip
+*cd gtest-1.7.0/ && ./configure && make && export GTEST_DIR=`pwd` && cd ..*
 
-Configure and build the framework.
+Clone this repository and build the skeleton.
 
-tdd-kata > cd gtest-1.7.0
-tdd-kata/gtest-1.7.0 > ./configure
-tdd-kata/gtest-1.7.0 > make
+*git clone https://github.com/SneakingCat/tdd-cpp-kata.git && cd tdd-cpp-kata/ && make && ./UnitTest*
 
-Set this directory path in the environment variable GTEST_DIR (example
-show syntax for Bash).
-
-tdd-kata/gtest-1.7.0 > export GTEST_DIR=`pwd`
-
-Change one level up in the directory structure.
-
-tdd-kata/gtest-1.7.0 > cd ..
-
-Clone this repository.
-
-tdd-kata > git clone https://github.com/SneakingCat/tdd-cpp-kata.git
-
-Change directory to the cloned repository and make the unit tests.
-
-tdd-kata > cd tdd-cpp-kata
-tdd-kata/tdd-cpp-kata > make
-
-If everything goes ok you should now have a Linux binary called UnitTests.
-
-tdd-kata/tdd-cpp-kata > ./UnitTest
-
-More information about Google Test can be found at:
-http://code.google.com/p/googletest/
+After this moment you can use the commands *make clean*, *make* and
+*./UnitTest* for your build and test cycle.
 
