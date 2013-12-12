@@ -9,9 +9,8 @@ public:
   std::string Play(int number) const;
 
 private:
-  bool divisibleWith(int a, int b) const {
-    return a % b == 0;
-  }
+  bool divisibleWith(int a, int b) const;
+  std::string toString(int number) const;
 };
 
 #endif
