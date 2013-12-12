@@ -28,3 +28,5 @@ Clone this repository and build the skeleton.
 After this moment you can use the commands *make clean*, *make* and
 *./UnitTest* for your build and test cycle.
 
+http://code.google.com/p/googletest/
+
