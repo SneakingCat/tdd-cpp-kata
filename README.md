@@ -7,7 +7,7 @@ for TDD. The example used in the skeleton is the "FizzBuzz" game.
 Setting up the environment
 --------------------------
 
-In order to fetch Google Test and the skeleton repository proxies for
+In order to fetch Google Test and the skeleton repository, proxies for
 http and https may have to be set. On site at Ericsson this can be
 made by:
 
@@ -19,14 +19,14 @@ Create a base directory for the kata and go fetch Google Test:
 
 Build you local copy of Google Test:
 
-*cd gtest-1.7.0/ && ./configure && make && export GTEST_DIR=`pwd` && cd ..*
+*cd gtest-1.7.0/ && ./configure && make && export GTEST_DIR=\`pwd\` && cd ..*
 
 Clone this repository and build the skeleton.
 
-*git clone https://github.com/SneakingCat/tdd-cpp-kata.git && cd tdd-cpp-kata/ && make && ./UnitTest*
+*git clone https://github.com/SneakingCat/tdd-cpp-kata.git && cd tdd-cpp-kata/ && make && ./UnitTests*
 
 After this moment you can use the commands *make clean*, *make* and
-*./UnitTest* for your build and test cycle.
+*./UnitTests* for your build and test cycle.
 
 http://code.google.com/p/googletest/
 
